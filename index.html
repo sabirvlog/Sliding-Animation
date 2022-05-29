@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Animation- Image Sliding Project</title>
+</head>
+<body>
+	<div class="Slider">
+	 <div class="Slides">
+		<input type="radio" name="radio-btn" id="radio1">
+		<input type="radio" name="radio-btn" id="radio2">
+		<input type="radio" name="radio-btn" id="radio3">
+		<input type="radio" name="radio-btn" id="radio4">
+<!-- Images slide starts -->
+		<div class="Slide first">
+			<img src="1.jpg" alt="image">
+		</div>
+		<div class="Slide">
+			<img src="2.jpg" alt="image">
+		</div>
+		<div class="Slide">
+			<img src="3.jpg" alt="image">
+		</div>
+		<div class="Slide">
+			<img src="4.jpg" alt="image">
+		</div>
+
+			<!-- Images Auto-slide starts -->
+			<div class="auto-navigation">
+				<div class="auto-btn1"></div>
+				<div class="auto-btn2"></div>
+				<div class="auto-btn3"></div>
+				<div class="auto-btn4"></div>
+			</div>
+	</div>
+	<!-- Images Manual-slide starts -->
+	<div class="manual-navigation">
+		<label for="radio1" class="manual-btn"></label>
+		<label for="radio2" class="manual-btn"></label>
+		<label for="radio3" class="manual-btn"></label>
+		<label for="radio4" class="manual-btn"></label>
+	</div>
+ </div>
+
+ 		<script type="text/javascript">
+ 			var counter = 1;
+ 			setInterval(function () {
+ 			document.getElementById('radio' + counter).checked =true;
+ 			counter++;
+ 			if (counter > 4) {
+ 				counter = 1;
+ 			}	
+ 			},5000);       
+ 	
+
+ 			/* In this case the 5000 value means time in nano seconds to
+ 			drop the timing capacity of slider radio buttons so that they 
+ 			"btn" moves/flow slowly. */
+ 		</script>
+</body>
+</html>
